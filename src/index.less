@@ -1,0 +1,186 @@
+@import '~iview/src/styles/index.less';
+
+@menu-dark-title: #001529;
+@menu-dark-active-bg: #000c17;
+@layout-sider-background: #001529;
+
+// 重置IVIEW默认样式
+.ivu-layout-header {
+    height: 50px;
+    line-height: 50px;
+    padding: 0 px!important;
+}
+
+/* 侧边栏 */
+.main .left-sider .ivu-layout-sider-children{
+	margin-right: 0;
+	overflow: hidden;
+	width: 100%;
+}
+
+// 修复侧边栏文字溢出问题
+.ivu-menu-item {
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+// 重置侧边栏高亮字体样式
+.ivu-menu-dark.ivu-menu-vertical .ivu-menu-item-active:not(.ivu-menu-submenu), 
+.ivu-menu-dark.ivu-menu-vertical .ivu-menu-submenu-title-active:not(.ivu-menu-submenu) {
+    color: #fff;
+}
+
+// 重置表格样式
+.ivu-table{
+	background-color: transparent;
+	overflow-y: auto;
+}
+.ivu-table-cell {
+	overflow: visible;
+	text-align: center;
+}
+.ivu-table-header {
+	height: 48px;
+}
+.ivu-table-small th {
+	height: 48px;
+	text-align: center;
+}
+.ivu-table-wrapper {
+	border: none !important;
+}
+.ivu-table:after {
+	width: 0 !important;
+	background-color: transparent !important;
+}
+
+/* 表格 hover样式 */
+.ivu-table-row-hover.ivu-table-row > td {
+	background-color: #cacfdb;
+}
+
+
+.clear:after{
+    content: "";
+    display: block;
+    height: 0;
+    visibility: hidden;
+    clear: both;
+}
+.hidden{
+	visibility: hidden !!important;
+}
+.none{
+	display: none !important;
+}
+.width150{
+	width: 150px;
+}
+
+// 输入框对齐
+.text-indent-1em > label{
+    text-indent: 1em;
+} 
+.text-indent-2em > label{
+    text-indent: 2em;
+}
+
+/* 重置表单样式 */
+.ivu-form-item .ivu-form-item-label{
+    white-space: nowrap;
+}
+
+
+// 重置按钮样式
+.ivu-btn-circle.ivu-btn-icon-only.ivu-btn-large,
+.ivu-btn-circle-outline.ivu-btn-icon-only.ivu-btn-large {
+	height: 100%;
+	width: 34px;
+	font-size: 18px;
+}
+.ivu-icon-ios-search:before {
+	font-size: 16px;
+}
+/* 查询按钮 */
+.ivu-btn.ivu-btn-primary.ivu-btn-large {
+	height: 100% !important;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+.del-modal .ivu-modal-footer .ivu-btn:hover,
+.del-modal .ivu-modal-footer .ivu-btn{
+	background-color: rgb(74, 119, 238) !important;
+	border-color: rgb(74, 119, 238) !important;
+	outline: none !important;
+}
+.jurisdiction-modal .ivu-btn.ivu-btn-primary.ivu-btn-large{
+	display: inline-block;
+}	
+
+/* ------重置滚动条样式-------- */
+::-webkit-scrollbar{
+	height: 8px;
+	width: 8px;
+	background-color: #FCFCFC;
+}
+/*定义滚动条轨道 内阴影+圆角*/
+::-webkit-scrollbar-track{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 4px;
+	background-color: #F5F5F5;
+}
+/*定义滑块 内阴影+圆角*/
+::-webkit-scrollbar-thumb{
+	border-radius: 4px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #cacfdb;
+}
+
+.filter>.fl>.input-wrapper.input-wrapper-small>.ivu-input-wrapper{
+	width: 70px;
+}
+
+.layout-footer-center{
+	text-align: center;
+	padding: 10px 0;
+	font-size: 12px;
+	color: #828080;
+}	
+// .form-item-textarea .ivu-form-item-content{
+// 	width: 100%;
+// }
+/* 气泡提示 样式 */
+.ivu-poptip-confirm .ivu-poptip-body > i.ivu-icon{
+	position: static;
+	float: left;
+}	
+.ivu-poptip-confirm .ivu-poptip-body > div{
+	text-align: left;
+}
+
+/* 加载中 */
+.demo-spin-icon-load{
+	animation: ani-demo-spin 1s linear infinite;
+}
+@keyframes ani-demo-spin {
+	from { transform: rotate(0deg);}
+	50%  { transform: rotate(180deg);}
+	to   { transform: rotate(360deg);}
+}
+
+/* 徽标 ivu-badge-count */
+.ivu-badge-count { 
+	height: 16px;
+	line-height: 14px;
+	top: 0;
+	transform: translateX(40%);
+	padding: 0 6px;
+	font-size: 10px;
+	z-index: 2;
+}
+
+/* 提交按钮 */
+.scrm-sub-btns{
+	padding: 8px 50px;
+}

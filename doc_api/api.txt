@@ -1,0 +1,300 @@
+[请求地址]    http://192.168.7.104:9000/api/v1
+
+01.用户令牌 - OK
+    Type：  GET
+    Routes：/token/login
+    Params：/administrator_B3774FFD16247900AC7A6CA623F0B417
+    Body:
+    Result：JSON
+            {
+                "Err": 0,
+                "Ret": 1,
+                "Data": {
+                    "Token": "eec2a51a0f4711e99c9a00155d067902",
+                    "CName": "公司名称：系统平台操作",
+                    "RealName": "admin",
+                    "Role": "系统超级管理员",
+                    "Authority": -1,
+                    "ExpireDate": 1546542523,
+                    "IsLocal": 0,
+                    "LocalApiUrl": ""
+                }
+            }
+
+
+02.用户服务
+    ********************************************
+    功能描述：
+    Type：  POST
+    Routes：/users
+    Params：/token:xxxxxx
+    Body: 
+    Result：
+
+
+03.菜单服务
+    ********************************************
+    功能描述： 获取菜单 - OK
+    Type：  GET
+    Routes：/menus/take
+    Params：/token:xxxxxx
+    Body: 
+    Result：JSON
+            {
+                "Err": 0,
+                "Ret": 1,
+                "Data": [
+                    {
+                        "Id": 1,
+                        "PId": 0,
+                        "Guid": "aabf7ceecf4e11e7bbc6d4ae529094a3",
+                        "IconFont": "Images/menus/config_1.png",
+                        "Name": "系统设置",
+                        "Url": "Blank/SystemPage.xaml",
+                        "Depth": "0",
+                        "Rank": 0
+                    },
+                    {
+                        "Id": 2,
+                        "PId": 0,
+                        "Guid": "b3734788cf4e11e7bbc6d4ae529094a3",
+                        "IconFont": "Images/menus/user_1.png",
+                        "Name": "资源设置",
+                        "Url": "Blank/ResourcesPage.xaml",
+                        "Depth": "0",
+                        "Rank": 0
+                    },
+                    {
+                        "Id": 3,
+                        "PId": 1,
+                        "Guid": "",
+                        "IconFont": "Images/menus/user_2.png",
+                        "Name": "所有员工管理",
+                        "Url": "User/IndexPage.xaml",
+                        "Depth": "1",
+                        "Rank": 0
+                    },
+                    {
+                        "Id": 4,
+                        "PId": 3,
+                        "Guid": "",
+                        "IconFont": "Images/menus/dept_2.png",
+                        "Name": "用户列表",
+                        "Url": "User/IndexPage.xaml",
+                        "Depth": "2",
+                        "Rank": 0
+                    },
+                    {
+                        "Id": 5,
+                        "PId": 3,
+                        "Guid": "",
+                        "IconFont": "Images/menus/user_3.png",
+                        "Name": "用户新增",
+                        "Url": "User/EditPage.xaml",
+                        "Depth": "2",
+                        "Rank": 0
+                    },
+                    {
+                        "Id": 21,
+                        "PId": 2,
+                        "Guid": "",
+                        "IconFont": "Images/menus/firm_1.png",
+                        "Name": "客户信息管理",
+                        "Url": "Customer/IndexPage.xaml",
+                        "Depth": "1",
+                        "Rank": 0
+                    },
+                    {
+                        "Id": 22,
+                        "PId": 21,
+                        "Guid": "",
+                        "IconFont": "Images/menus/role_3.png",
+                        "Name": "客户列表",
+                        "Url": "Customer/IndexPage.xaml",
+                        "Depth": "2",
+                        "Rank": 0
+                    },
+                    {
+                        "Id": 30,
+                        "PId": 0,
+                        "Guid": "d772190dd22a90d5a84b33376bea3baf",
+                        "IconFont": "Images/menus/res_distribute.png",
+                        "Name": "数据中心",
+                        "Url": "Reports/BaseReportsPage.xaml",
+                        "Depth": "0",
+                        "Rank": 3
+                    },
+                    {
+                        "Id": 31,
+                        "PId": 30,
+                        "Guid": "",
+                        "IconFont": "Images/menus/confg_2.png",
+                        "Name": "报表管理",
+                        "Url": "Reports/BaseReportsPage.xaml",
+                        "Depth": "1",
+                        "Rank": 1
+                    },
+                    {
+                        "Id": 32,
+                        "PId": 31,
+                        "Guid": "",
+                        "IconFont": "Images/menus/config_3.png",
+                        "Name": "基础报表",
+                        "Url": "Reports/BaseReportsPage.xaml",
+                        "Depth": "2",
+                        "Rank": 1
+                    }
+                ]
+            }
+    
+
+    
+    ********************************************
+    功能描述： 获取一级和二级菜单
+    Type：  GET
+    Routes：/menus/part
+    Params：/token:xxxxxx
+    Body:
+    Result：
+            {
+                "Err": 0,
+                "Ret": 11,
+                "Data": [
+                    {
+                        "Value": 1,
+                        "Key": "--系统设置"
+                    },
+                    {
+                        "Value": 2,
+                        "Key": "--资源设置"
+                    },
+                    {
+                        "Value": 3,
+                        "Key": "----所有员工管理"
+                    },
+                    {
+                        "Value": 6,
+                        "Key": "----公司开户管理"
+                    },
+                    {
+                        "Value": 9,
+                        "Key": "----系统角色设置"
+                    },
+                    {
+                        "Value": 12,
+                        "Key": "----系统基础设置"
+                    },
+                    {
+                        "Value": 15,
+                        "Key": "----客户来源管理"
+                    },
+                    {
+                        "Value": 18,
+                        "Key": "----公司部门管理"
+                    },
+                    {
+                        "Value": 21,
+                        "Key": "----客户信息管理"
+                    },
+                    {
+                        "Value": 30,
+                        "Key": "--数据中心"
+                    },
+                    {
+                        "Value": 31,
+                        "Key": "----报表管理"
+                    }
+                ]
+            }
+
+
+    
+    ********************************************
+    功能描述： 分页查询
+    Type：  POST
+    Routes：/menus/query
+    Params：/token:token_id
+    Body: 
+            {
+                "RowIndex": 1,      //查询起始页
+                "PageCapacity": 2,  //查询条数
+                "Name": "系统设置"   //菜单名称
+            }
+    Result：
+
+    ********************************************
+    
+04.公司服务
+    ********************************************
+    功能描述： 分页查询
+    Type：  GET
+    Routes：/company/login
+    Params：/token:xxxxxx
+    Result：
+    ********************************************
+
+    
+05.角色服务
+    ********************************************
+    功能描述： 分页查询
+    Type：  GET
+    Routes：/roles
+    Params：/token:xxxxxx
+    Result：
+
+06.角色菜单服务
+    ********************************************
+    功能描述： 分页查询
+    Type：  GET
+    Routes：/rolemenus
+    Params：/token:xxxxxx
+    Result：
+
+
+07.部门服务
+    ********************************************
+    功能描述： 分页查询
+    Type：  GET
+    Routes：/deptment
+    Params：/token:xxxxxx
+    Result：
+
+
+08.资源服务
+    ********************************************
+    功能描述： 分页查询
+    Type：  GET
+    Routes：/resources
+    Params：/token:xxxxxx
+    Result：
+
+
+09.客户服务
+    ********************************************
+    功能描述： 分页查询
+    Type： GET
+    Routes：/customer
+    Params：/token:xxxxxx
+    Result：
+
+
+10.客户沟通小结服务
+    ********************************************
+    功能描述： 分页查询
+    Type：  GET
+    Routes：/negorecords
+    Params：/token:xxxxxx
+    Result：
+
+
+11.数据报表服务
+    ********************************************
+    功能描述： 分页查询
+    Type：  GET
+    Routes：/data
+    Params：/token:xxxxxx
+    Result：
+    
+
+
+
