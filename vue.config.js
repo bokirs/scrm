@@ -52,11 +52,11 @@ module.exports = {
 	devServer: {
 	    proxy: {
 	        '/api': {
-	            target: 'http://192.168.7.104:9000/api',
+	            target: 'https://easy-mock.com/mock/5cda71b6d81bdf65a614bf5e/scrm',
 	            changeOrigin: true,
 	            ws: true,
 	            pathRewrite: {
-					'^/api': ''
+					      '^/api': ''
 	            }
 	        }
 	    },

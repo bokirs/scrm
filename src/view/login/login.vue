@@ -99,14 +99,15 @@ export default {
            setAuthority(res.data.Data.Authority)
 					 this.token = res.data.Data.Token;
 					 AXIOSrequest('api/v1/menus/take/' + this.token, 'get').then(Res => {
+             console.log( Res )
 						if (Res.data.Err === 0) {
-								let data = Res.data.Data
+                let data = Res.data.Data
 								that.$store.dispatch('setButtonList', data)
-								let list = []
-								data.map(item => {
-									list.push(item.Id)
-								})
-								that.getAddRoute(list)
+								// let list = []
+								// data.map(item => {
+								// 	list.push(item.Id)
+                // })
+								that.getAddRoute(data)
 						}
 					})
 				}
